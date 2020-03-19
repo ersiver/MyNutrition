@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.mealDetail.MealDetailsActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_layout" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        app:cardCornerRadius="10dip">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/caloriesLayout"
+            android:padding="12dp">
+
+            <RelativeLayout
+                android:id="@+id/innerLayoutUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/favouriteImageView"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="@string/contentDesc"
+                    android:src="@drawable/ic_favourite" />
+
+                <TextView
+                    android:id="@+id/nameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/favouriteImageView"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/ingredientTitleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/innerLayoutUp"
+                android:layout_marginTop="4dp"
+                android:layout_alignParentStart="true"
+                android:text="@string/ingredients"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/caloriesLayout"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/kcalTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toStartOf="@+id/generalTextView1"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/generalTextView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="2dp"
+                    android:text="@string/kcal_per_100g_see_details"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/detailNutritionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_below="@id/generalTextView1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/bg_button"
+                    android:text="@string/nutrition"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardview1"
+        app:cardElevation="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        app:cardCornerRadius="10dip">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mealIngredientsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ImageView
+        android:id="@+id/searchIngredientsImageView"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0.5"
+        android:contentDescription="@string/contentDesc"
+        android:src="@drawable/ic_add_button" />
+
+
+</RelativeLayout>

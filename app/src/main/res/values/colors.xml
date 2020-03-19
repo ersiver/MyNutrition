@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8c7ae6</color>
+    <color name="colorPrimaryDark">#8c7ae6</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="deleteColor">#FF3C30</color>
+    <color name="infoColor">#4BBDE3</color>
+    <color name="bgColor">#F5F1E7</color>
+    <color name="bright">#F7B332</color>
+</resources>

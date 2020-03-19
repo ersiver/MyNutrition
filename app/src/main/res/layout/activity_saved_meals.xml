@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.mealSaved.SavedMealsActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_saved_meals"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/searchIngredientRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll">
+
+                <EditText
+                    android:id="@+id/searchIngredientEditText"
+                    android:layout_width="280dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/bg_searching_section"
+                    android:ems="10"
+                    android:hint="@string/search_my_meals"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:paddingStart="32dp"
+                    tools:ignore="Autofill,RtlSymmetry" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignStart="@id/searchIngredientEditText"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:contentDescription="@string/contentDesc"
+                    android:alpha="0.6"
+                    android:src="@drawable/ic_search" />
+
+                <ImageView
+                    android:id="@+id/clearTextImageView"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignEnd="@+id/searchIngredientEditText"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="@string/contentDesc"
+                    android:alpha="0.6"
+                    android:src="@drawable/ic_clear" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/savedRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <ImageView
+        android:id="@+id/addMealButton"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0.5"
+        android:contentDescription="@string/contentDesc"
+        android:src="@drawable/ic_add_button" />
+
+</RelativeLayout>
+
+
+
