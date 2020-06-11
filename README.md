@@ -2,7 +2,7 @@
 A nutrition calculation app that generates accurate nutrition data for recipes/meals.
 ## Libraries and tools used:
 + Architecture (Lifecycles, LiveData, Room, ViewModel).<br/>
-+ UI (Cardview, AppBarLayout, RecyclerView).<br/>
++ UI (Cardview, AppBarLayout, RecyclerView, RadioGroup, Dialog, CheckBox).<br/>
 + Retrofit, Gson.<br/>
 + The app uses created by me database of only verified food and nutrition data recomended by Food Standard Agency and is under further development.
 ## Preview
