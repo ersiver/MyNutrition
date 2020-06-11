@@ -31,8 +31,6 @@ public class CalculatorIngredientNutrition {
     private double getDivisor(String quantityUnit) {
         if (quantityUnit.equals("kg") || quantityUnit.equals("l"))
             return 0.1;
-        else if (quantityUnit.equals("ml"))
-            return 1_000_000;
         else
             return 100;
     }
