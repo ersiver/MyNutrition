@@ -168,7 +168,7 @@ public class IngredientDetailsActivity extends AppCompatActivity {
             ingredient.setQuantityUnit(chosenUnit);
 
             try {
-                quantity = Double.valueOf(quantityEditText.getText().toString());
+                quantity = Double.parseDouble(quantityEditText.getText().toString());
                 ingredient.setQuantity(quantity);
             } catch (IllegalArgumentException e) {
                 ingredient.setQuantity(0);
